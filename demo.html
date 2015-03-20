@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/L_slide.js"></script>
+	<style>
+	   * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    .wp{
+    	margin: 0 auto;width: 670px;
+        height: 240px;
+    }
+    
+    .wrap {
+        width: 670px;
+        height: 240px;
+        position: relative;
+        overflow: hidden;
+        float: left;
+        margin: 20px;
+    }
+    
+    .slidebox {
+        width: 670px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 240px;
+    }
+    
+    .slidebox li {
+        float: left;
+        width: 670px;
+        height: 240px;
+        left: 0;
+        top: 0;
+    }
+    
+    .slidebox li img {
+        display: block;
+        width: 670px;
+        height: 240px;
+    }
+    
+    .dot {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        /*background: rgba(0, 0, 0, 0.3);*/
+        text-align: right;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .dot p {
+        margin-right: 10px;
+    }
+    
+    .dot b {
+        width: 17px;
+        height: 17px;
+        /*border-radius: 20px;*/
+        color: #333;
+        display: inline-block;
+        border: 1px solid #fff;
+        background: #fff;
+        text-align: center;
+        line-height: 17px;
+        margin: 0 3px;
+        margin-top: 6px;
+        cursor: pointer;
+        font-weight: normal;
+    }
+    
+    .dot .cur {
+        background: #F63;
+        color: #fff;
+        border: 1px solid #f63;
+    }</style>
+</head>
+<body>
+<div class="wp">
+	<div class="wrap">
+		<ul class="slidebox">
+			<li><img src="images/p1.jpg" alt=""></li>
+			<li><img src="images/p2.jpg" alt=""></li>
+			<li><img src="images/p3.jpg" alt=""></li>
+			<li><img src="images/p4.jpg" alt=""></li>
+			<li><img src="images/p2.jpg" alt=""></li>
+		</ul>
+	</div></div>
+	<script>
+$(function(){
+	$(".wrap").slide({
+		affect:4,
+		time:1000,
+		speed:400,
+	})
+})
+	</script>
+</body>
+</html>
